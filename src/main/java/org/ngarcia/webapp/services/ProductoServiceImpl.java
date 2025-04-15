@@ -1,5 +1,6 @@
 package org.ngarcia.webapp.services;
 
+import jakarta.ejb.Stateful;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import org.ngarcia.webapp.configs.ProductoServicePrincipal;
@@ -17,7 +18,7 @@ import org.ngarcia.webapp.interceptors.Logging;
 //@Named("productoDefault")
 @Service
 @ProductoServicePrincipal
-@Stateless
+@Stateful
 public class ProductoServiceImpl implements ProductoService {
 
    @Inject

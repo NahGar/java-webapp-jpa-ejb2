@@ -21,6 +21,9 @@ public class ProductoRepositoryJpaImpl implements ProductoRepository {
     @Override
     public List<Producto> listar() throws Exception {
         String sql = "select p from Producto p left outer join fetch p.categoria";
+        //como hace carga Lazy cuando necesite los datos de la categoría va a fallar
+        //porque esta modalidad no permite que se hagan consultas fuera del service
+        //String sql = "select p from Producto p";
         return em.createQuery(sql, Producto.class).getResultList();
     }
 

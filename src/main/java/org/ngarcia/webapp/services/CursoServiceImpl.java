@@ -1,6 +1,6 @@
 package org.ngarcia.webapp.services;
 
-import jakarta.ejb.Stateless;
+import jakarta.ejb.*;
 import jakarta.inject.Inject;
 import org.ngarcia.webapp.models.entities.Curso;
 import org.ngarcia.webapp.repositories.*;
@@ -11,7 +11,7 @@ import org.ngarcia.webapp.configs.Service;
 
 //@ApplicationScoped
 @Service
-@Stateless
+@Stateful
 public class CursoServiceImpl implements CursoService {
 
    @Inject

@@ -1,5 +1,6 @@
 package org.ngarcia.webapp.services;
 
+import jakarta.ejb.Stateful;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import org.ngarcia.webapp.configs.Service;
@@ -10,7 +11,7 @@ import java.util.*;
 
 //@ApplicationScoped
 @Service
-@Stateless
+@Stateful
 public class UsuarioServiceImpl implements UsuarioService {
 
    private UsuarioRepository repository;
